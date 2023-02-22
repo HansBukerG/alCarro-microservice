@@ -1,0 +1,50 @@
+{
+  "name": "product-microservice",
+  "version": "1.0.0",
+  "description": "Microservice designed for alCarrov2 back-end project ",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon ./index.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --setupFiles dotenv/config"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HansBukerG/alCarro-microservice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HansBukerG/alCarro-microservice/issues"
+  },
+  "homepage": "https://github.com/HansBukerG/alCarro-microservice#readme",
+  "dependencies": {
+    "@validatecl/rut": "^4.0.3",
+    "axios": "^0.27.2",
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "express-validator": "^6.14.2",
+    "helmet": "^5.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
+    "moment-timezone": "^0.5.37",
+    "morgan": "^1.10.0",
+    "node-xlsx": "^0.21.0",
+    "nodemailer": "^6.7.7",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "pg": "^8.9.0",
+    "pg-hstore": "^2.3.4",
+    "pug": "^3.0.2",
+    "sequelize": "^6.28.0",
+    "uuidv4": "^6.2.13"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "nodemon": "^1.3.3",
+    "supertest": "^6.3.3"
+  }
+}
