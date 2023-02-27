@@ -7,8 +7,6 @@ const host = process.env.PG_HOST
 const port = process.env.PG_PORT
 const dialect = process.env.PG_DIALECT
 
-// const uri = `${dialect}://${user}:${password}@${host}:${port}/${database}`;
-
 const client = new Sequelize(
     database,
     user,
