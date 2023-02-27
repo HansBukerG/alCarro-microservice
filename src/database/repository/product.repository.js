@@ -24,9 +24,27 @@ const create = async(filter) => {
     } catch (error) {
         statusCode = StatusCodes.BAD_GATEWAY
     } finally {
-        client.close();
         return statusCode;
     }
 }
 
-export {create};
+const readAllProducts = async() => {
+    let statusCode;
+    let products;
+    try {
+        products = await Product.findAll();
+        if (products.length != 0) {
+            statusCode = StatusCodes.ACCEPTED
+        }else{
+            statusCode = StatusCodes.NOT_FOUND
+        }
+    } catch (error) {
+        console.log('Error: ');
+        console.log(error);
+        statusCode = StatusCodes.BAD_GATEWAY
+    } finally {
+        return { products, statusCode }
+    }
+}
+
+export {create, readAllProducts};

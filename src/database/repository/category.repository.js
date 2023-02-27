@@ -22,7 +22,6 @@ const createCategory = async(filter) => {
         category = '';
         statusCode = 503;
     } finally {
-        await client.close();
         return {category, statusCode}
     }
 }
